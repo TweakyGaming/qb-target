@@ -16,7 +16,7 @@ This is an example using **exports**
 exports['qb-target']:AddBoxZone("MissionRowDutyClipboard", vector3(441.7989, -982.0529, 30.67834), 0.45, 0.35, {
 	name = "MissionRowDutyClipboard",
 	heading = 11.0,
-	debugPoly = false,
+	debugPoly = true,
 	minZ = 30.77834,
 	maxZ = 30.87834,
 }, {

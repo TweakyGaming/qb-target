@@ -27,10 +27,10 @@ Config.Debug = false
 Config.Standalone = false
 
 -- Enable outlines around the entity you're looking at
-Config.EnableOutline = false
+Config.EnableOutline = true
 
 -- Enable default options (Toggling vehicle doors)
-Config.EnableDefaultOptions = true
+Config.EnableDefaultOptions = false
 
 -- Disable the target eye whilst being in a vehicle
 Config.DisableInVehicle = false
@@ -57,7 +57,7 @@ Config.BoxZones = {
 }
 
 Config.PolyZones = {
-
+	
 }
 
 Config.TargetBones = {
@@ -69,6 +69,138 @@ Config.TargetEntities = {
 }
 
 Config.TargetModels = {
+	--Automaten
+	["drinkwaterVending"] = {
+        models =     {
+            "prop_vend_water_01",
+        },
+        options = {
+            {
+                type = "client",
+                event = 'vendingwaterDrink:buy',
+                icon = "fas fa-shopping-basket",
+                label = "Insert Coin",
+            },
+        },
+        distance = 2.5
+    },
+	["drinkcolaVending"] = {
+        models =     {
+            "prop_vend_soda_01",
+        },
+        options = {
+            {
+                type = "client",
+                event = 'vendingcolaDrink:buy',
+                icon = "fas fa-shopping-basket",
+                label = "Insert Coin",
+            },
+        },
+        distance = 2.5
+    },
+		["drinkspunkVending"] = {
+			models =     {
+				"prop_vend_soda_02",
+			},
+			options = {
+				{
+					type = "client",
+					event = 'vendingsprunkDrink:buy',
+					icon = "fas fa-shopping-basket",
+					label = "Insert Coin",
+				},
+			},
+			distance = 2.5
+		},
+    ["vendingSnack"] = {
+        models =     {
+            "prop_vend_snak_01",
+            "prop_vend_snak_01_tu",
+        },
+        options = {
+            {
+                type = "client",
+                event = 'vendingSnack:buy',
+                icon = "fas fa-shopping-basket",
+                label = "Insert Coin",
+            },
+        },
+        distance = 2.5
+    },
+    
+    ["vendingCoffee"] = {
+        models =     {
+            "prop_vend_coffe_01",
+        },
+        options = {
+            {
+                type = "client",
+                event = 'vendingCoffee:buy',
+                icon = "fas fa-shopping-basket",
+                label = "Insert Coin",
+            },
+        },
+        distance = 2.5
+    },
+	--Automaten end
+	
+	--shops
+	["24/7 shops"] = {
+        models = {
+            "mp_m_shopkeep_01",
+        },
+        options = {
+            {
+                type = "client",
+                event = "qb-shops:marketshop",
+                icon = "fas fa-store",
+                label = "Buy Items",
+            },
+        },
+        distance = 2.5,
+    },
+    ["ammunation shops"] = {
+        models = {
+            "s_m_y_ammucity_01",
+        },
+        options = {
+            {
+                type = "client",
+                event = "qb-shops:marketshop",
+                icon = "fas fa-shopping-cart",
+                label = "Buy Weapons",
+            },
+        },
+        distance = 2.5,
+    },
+    ["youtool shops"] = {
+        models = {
+            "s_m_m_lathandy_01",
+        },
+        options = {
+            {
+                type = "client",
+                event = "qb-shops:marketshop",
+                icon = "fas fa-wrench",
+                label = "Buy Tools",
+            },
+        },
+        distance = 2.5,
+    },
+    ["sea world"] = {
+        models = {
+            "cs_dom",
+        },
+        options = {
+            {
+                type = "client",
+                event = "qb-shops:marketshop",
+                icon = "fas fa-circle",
+                label = "Buy Gear",
+            },
+        },
+        distance = 2.5,
+    },
 
 }
 
@@ -89,7 +221,276 @@ Config.GlobalPlayerOptions = {
 }
 
 Config.Peds = {
-
+	{  -------Youtool Shop------
+	model = 's_m_m_lathandy_01',
+	coords = vector4(45.48, -1748.85, 28.55, 55.1),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+{  -------Youtool Shop------
+	model = 's_m_m_lathandy_01',
+	coords = vector4(2748.07, 3472.72, 54.70, 238.96),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(24.5, -1346.63, 28.60, 273.18),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(-47.18, -1758.46, 28.45, 39.64),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(-706.02, -913.9, 18.35, 86.17),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(-1486.75, -377.57, 39.20, 132.60),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+	-- San Andreas Ave Robs Liquor
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(-1221.30, -907.82, 11.40, 34.60),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(161.55, 6643.0, 31.7, 231.67),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Carrson Ave
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(372.6, 327.06, 102.55, 258.49),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- North Rockford
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(-1819.96, 794.04, 137.10, 126.36),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Great Ocean South
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(-3039.89, 584.21, 6.90, 16.15),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Great Ocean Robs Liquor
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(-2966.41, 391.62, 14.05, 84.40),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Mirror Park
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(1164.72, -323.04, 68.25, 93.92),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Vespucci Boulevard Robs Liquor
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(1134.32, -983.25, 45.45, 278.23),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Route 68
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(549.24, 2670.37, 41.25, 94.15),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Sandy
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(1959.72, 3740.68, 31.40, 297.43),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Sandy Shores Robs Liquor
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(1165.25, 2710.80, 38.16, 183.01),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Grape Seed
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(1697.8, 4923.14, 41.10, 321.33),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Great Ocean North
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(1728.33, 6416.21, 34.05, 241.78),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- LS Freeway
+{
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(2677.32, 3279.69, 54.30, 323.82),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+{---by youtool
+	model = 'mp_m_shopkeep_01',
+	coords = vector4(2557.28, 380.78, 107.65, 359.83),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Ammunations
+{   ----vesspuci
+	model = 's_m_y_ammucity_01',
+	coords = vector4(-661.98, -933.57, 20.80, 181.76),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Legion Square
+{
+	model = 's_m_y_ammucity_01',
+	coords = vector4(22.59, -1105.55, 28.80, 159.83),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Popular Street
+{
+	model = 's_m_y_ammucity_01',
+	coords = vector4(810.21, -2159.02, 28.60, 1.43),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Vespucci Boulevard
+{
+	model = 's_m_y_ammucity_01',
+	coords = vector4(842.42, -1035.31, 27.20, 358.67),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Vinewood Hills
+{
+	model = 's_m_y_ammucity_01',
+	coords = vector4(253.87, -50.58, 68.95, 67.39),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Palomino Freeway
+{
+	model = 's_m_y_ammucity_01',
+	coords = vector4(2567.97, 292.64, 107.80, 358.18),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Route 68
+{
+	model = 's_m_y_ammucity_01',
+	coords = vector4(-1118.98, 2699.77, 17.60, 223.39),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Sandy Shores
+{
+	model = 's_m_y_ammucity_01',
+	coords = vector4(1692.21, 3760.91, 33.70, 229.39),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+-- Paleto
+{
+	model = 's_m_y_ammucity_01',
+	coords = vector4(-331.61, 6084.92, 30.55, 226.57),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
+{ --sea world
+	model = 'cs_dom',
+	coords = vector4(-1686.39, -1072.48, 12.15, 50.1),
+	gender = 'male',
+	freeze = true,
+	invincible = true,
+	blockevents = true,
+},
 }
 
 -------------------------------------------------------------------------------
